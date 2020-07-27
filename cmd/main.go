@@ -89,6 +89,37 @@ func main() {
 
 	t1 := time.Now() // get current time
 
+	
+	//html2pdf.ConvertHTML("D:\\statment_test\\Data22\\20191126ＮoJS.htm","H123123123")
+
+	// ---- start of products and customers ---
+	//---- ref:http://www.hatlonely.com/2018/03/11/golang-%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85/index.html ---
+	/*
+	t1 = time.Now() // get current time
+	fmt.Println("Start Time = ", time.Now())
+	nCPU := runtime.NumCPU()
+	var wgp sync.WaitGroup
+	var wgc sync.WaitGroup
+	stop := false
+	products := make(chan string, 10)
+	go producer(&wgp, products, &stop)
+	wgp.Add(1)
+	// 建立nCPU個消費者(也可建立生產者)
+	for i := 0; i <= nCPU; i++ {
+		go consumer(&wgc, products)
+		wgc.Add(1)
+	}
+	time.Sleep(time.Duration(1) * time.Second)
+	stop = true     // 設置生產者 終止flag
+	wgp.Wait()      // 等待生產者 退出
+	close(products) // 關閉Channel
+	wgc.Wait()      // 等待消費者退出
+	//---- end of products and customers ---
+	pEndTime(t1)
+	fmt.Println("End Time = ", time.Now())
+	*/
+	
+	
 	// ---------start remmove javascript element from html file----------
 	/*
 		file, err := osOpe(htmlPath + filename + ".htm") // For read access.
